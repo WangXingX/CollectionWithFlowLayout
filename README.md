@@ -1,2 +1,2 @@
 # CollectionWithFlowLayout
-带流水布局的CollectionView
+热门搜索功能，带流水布局的CollectionView
