@@ -44,12 +44,11 @@
     self.view.backgroundColor =  [UIColor colorWithRed:224/255.0 green:224/255.0 blue:224/255.0 alpha:1];
     
     [self loadData];
-
-
     
     [self createTable];
 }
 
+#pragma mark ******** 创建一些测试数据  ********
 - (void)loadData{
     self.projectArr = @[
         @{@"title":@"学科", @"value":@[@"全部",@"人力资源哈哈哈",@"高级营养管理师",@"我是测试数据用来测试换行的啊啊啊啊嗷嗷啊啊哈哈哈ahead",@"测试啊",@"23",@"高级",@"厉害",@"心理咨询师进阶",@"测试换行是否显示这个奶茶功能啊",@"我是多余的",@"还好"]},
@@ -106,7 +105,7 @@
 }
 
 
-
+#pragma mark ********   创建视图  ********
 - (void)createTable{
     WX_TypeFlowLayout * flow = [[WX_TypeFlowLayout alloc]init];
     self.typeCollection = [[UICollectionView alloc]initWithFrame:CGRectMake(itemPadding,  0 , self.view.frame.size.width - itemPadding,  self.view.frame.size.height ) collectionViewLayout:flow];
@@ -118,6 +117,7 @@
     [self.typeCollection registerClass:[WX_SearchCollectionViewCell class] forCellWithReuseIdentifier:@"WX_SearchCollectionViewCell"];
     [self.typeCollection registerClass:[WXCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"WXCollectionReusableView"];
 }
+
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return self.itemHeightArr.count;
 }
